@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__2github_2workspace_2README"></a> <img src="https://github.com/libscran/scran_tests/actions/workflows/run-tests.yaml/badge.svg" alt="Unit tests" style="pointer-events: none;" class="inline"/> <img src="https://github.com/libscran/scran_tests/actions/workflows/doxygenate.yaml/badge.svg" alt="Documentation" style="pointer-events: none;" class="inline"/> <a href="https://codecov.io/gh/libscran/scran_tests"><img src="https://codecov.io/gh/libscran/scran_tests/graph/badge.svg?token=9OqeoHc56i" alt="Codecov" style="pointer-events: none;" class="inline"/></a></p>
-<p>This repository contains test utilities to be re-used by other <a href="https://github.com/libscran"><b>libscran</b></a> libraries. To use, just add the following to the test's <code>CMakeLists.txt</code>:</p>
+<p>This repository contains utilities for testing other <a href="https://github.com/libscran"><b>libscran</b></a> libraries. To include this in a project, just add the following chunk to the test-specific <code>CMakeLists.txt</code>:</p>
 <div class="fragment"><div class="line">include(FetchContent)</div>
 <div class="line"> </div>
 <div class="line">FetchContent_Declare(</div>
@@ -87,10 +87,10 @@ $(function() {
 <div class="line">FetchContent_MakeAvailable(scran_tests)</div>
 <div class="line"> </div>
 <div class="line">target_link_libraries(mylib INTERFACE scran_tests)</div>
-</div><!-- fragment --><p>This will automatically pull in <a href="https://github.com/google/googletest">GoogleTest</a> via <code>FetchContent</code> so downstream projects don't have to do it themselves. Then we just have to do:</p>
+</div><!-- fragment --><p>This will automatically pull in <a href="https://github.com/google/googletest">GoogleTest</a> via <code>FetchContent</code> so downstream projects don't have to do it themselves. Then, to use the library, we just have to add the header:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="scran__tests_8hpp.html">scran_tests/scran_tests.hpp</a>&quot;</span></div>
 <div class="ttc" id="ascran__tests_8hpp_html"><div class="ttname"><a href="scran__tests_8hpp.html">scran_tests.hpp</a></div><div class="ttdoc">Test utilites for libscran.</div></div>
-</div><!-- fragment --><p>As its name suggests, the <b><a class="el" href="namespacescran__tests.html" title="Test utilites for libscran.">scran_tests</a></b> library provides helper functions for unit tests. This includes random data generation:</p>
+</div><!-- fragment --><p>We can now simulate some random data easily:</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> res = <a class="code hl_function" href="namespacescran__tests.html#aa4dec0fde071a43a6fd49fced09cd8f3">scran_tests::simulate_vector</a>(100, <a class="code hl_struct" href="structscran__tests_1_1SimulationParameters.html">scran_tests::SimulationParameters</a>());</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span> sparse_res = <a class="code hl_function" href="namespacescran__tests.html#aa4dec0fde071a43a6fd49fced09cd8f3">scran_tests::simulate_vector</a>(100, []{</div>
@@ -118,6 +118,8 @@ $(function() {
 <div class="fragment"><div class="line">std::vector&lt;double&gt; big_array(1000);</div>
 <div class="line"><span class="keyword">auto</span> subset = <a class="code hl_function" href="namespacescran__tests.html#ab26660d031934c0026a90623019d6110">scran_tests::vector_n</a>(big_array.data() + 100, 500); <span class="comment">// slice from [100, 600)</span></div>
 <div class="ttc" id="anamespacescran__tests_html_ab26660d031934c0026a90623019d6110"><div class="ttname"><a href="namespacescran__tests.html#ab26660d031934c0026a90623019d6110">scran_tests::vector_n</a></div><div class="ttdeci">std::vector&lt; Type_ &gt; vector_n(const Type_ *ptr, size_t n)</div><div class="ttdef"><b>Definition</b> vector_n.hpp:22</div></div>
+</div><!-- fragment --><p>Expect specific error messages:</p>
+<div class="fragment"><div class="line">expect_error([&amp;]() { <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;foobar&quot;</span>); }, <span class="stringliteral">&quot;foo&quot;</span>);</div>
 </div><!-- fragment --><p>Check out the <a href="https://libscran.github.io/scran_tests">documentation</a> for more details. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
