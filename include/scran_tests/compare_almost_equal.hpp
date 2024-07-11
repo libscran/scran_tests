@@ -1,8 +1,28 @@
-#ifndef SCRAN_TEST_COMPARE_ALMOST_EQUAL_H
-#define SCRAN_TEST_COMPARE_ALMOST_EQUAL_H
+#ifndef SCRAN_TESTS_COMPARE_ALMOST_EQUAL_HPP
+#define SCRAN_TESTS_COMPARE_ALMOST_EQUAL_HPP
 
 #include <gtest/gtest.h>
 
+/**
+ * @file compare_almost_equal.hpp
+ * @brief Check for almost-equality of floating-point values.
+ */
+
+namespace scran_tests {
+
+/**
+ * Check if two floating-point numbers are equal, accounting for some relative difference.
+ * Two numbers are considered equal if their difference is less than the product of `tolerance` and their mean.
+ * If both numbers are close to zero, they are considered equal if the difference is below 1e-15;
+ * this avoids being overly stringent for numbers that should be zero, at the cost of potentially missing large relative differences.
+ *
+ * @param left One of the numbers.
+ * @param right The other number.
+ * @param tol The tolerance for the comparison.
+ * @param report Whether to report the error via GoogleTest.
+ *
+ * @return Whether the two numbers are equal.
+ */
 inline bool compare_almost_equal(double left, double right, double tol = 1e-8, bool report = true) {
     if (left != right) {
         // Use relative tolerance to check that we get a similar float.
@@ -41,8 +61,19 @@ inline bool compare_almost_equal(double left, double right, double tol = 1e-8, b
     return true;
 }
 
-template<class V>
-void compare_almost_equal(const V& left, const V& right, double tol = 1e-8) {
+/**
+ * Check if two vectors contain an equal number of almost-equal floats.
+ * This compares the corresponding elements from each vector using `compare_almost_equal()`.
+ * Any test failure is reported via GoogleTest.
+ *
+ * @tparam Vector_ Some vector-like container of floating-point values.
+ * 
+ * @param left One of the vectors.
+ * @param right The other vector.
+ * @param tol The tolerance for the comparison, passed to the other `compare_almost_equal()` function.
+ */
+template<class Vector_>
+void compare_almost_equal(const Vector_& left, const Vector_& right, double tol = 1e-8) {
     ASSERT_EQ(left.size(), right.size());
     for (size_t i = 0; i < left.size(); ++i) {
         if (!compare_almost_equal(left[i], right[i], tol, false)) {
@@ -50,6 +81,8 @@ void compare_almost_equal(const V& left, const V& right, double tol = 1e-8) {
             return;
         }
     }
+}
+
 }
 
 #endif
