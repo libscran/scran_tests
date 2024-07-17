@@ -4,6 +4,7 @@
 #include "compare_almost_equal.hpp"
 #include "vector_n.hpp"
 #include "simulate_vector.hpp"
+#include "expect_error.hpp"
 
 /**
  * @file scran_tests.hpp
