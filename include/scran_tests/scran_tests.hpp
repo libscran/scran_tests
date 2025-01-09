@@ -5,6 +5,7 @@
 #include "vector_n.hpp"
 #include "simulate_vector.hpp"
 #include "expect_error.hpp"
+#include "initial_value.hpp"
 
 /**
  * @file scran_tests.hpp

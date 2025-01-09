@@ -66,7 +66,14 @@ auto subset = scran_tests::vector_n(big_array.data() + 100, 500); // slice from 
 Expect specific error messages:
 
 ```cpp
-expect_error([&]() { throw std::runtime_error("foobar"); }, "foo");
+scran_tests::expect_error([&]() { throw std::runtime_error("foobar"); }, "foo");
+```
+
+Test against zero-initialized assumptions:
+
+```cpp
+std::vector<double> tmp(10, scran_tests::initial_value());
+std::vector<double> tmp2(10, scran_tests::initial_value());
 ```
 
 Check out the [documentation](https://libscran.github.io/scran_tests) for more details.

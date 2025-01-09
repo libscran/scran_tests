@@ -4,6 +4,7 @@ add_executable(
     src/vector_n.cpp
     src/simulate_vector.cpp
     src/expect_error.cpp
+    src/initial_value.cpp
 )
 
 target_link_libraries(
