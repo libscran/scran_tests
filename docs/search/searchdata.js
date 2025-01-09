@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "cdeflstuv",
+  0: "cdefilstuv",
   1: "s",
   2: "s",
-  3: "cesv",
-  4: "cesv",
+  3: "ceisv",
+  4: "ceisv",
   5: "dlsu",
   6: "fltu"
 };

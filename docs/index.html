@@ -119,7 +119,12 @@ $(function() {
 <div class="line"><span class="keyword">auto</span> subset = <a class="code hl_function" href="namespacescran__tests.html#ab26660d031934c0026a90623019d6110">scran_tests::vector_n</a>(big_array.data() + 100, 500); <span class="comment">// slice from [100, 600)</span></div>
 <div class="ttc" id="anamespacescran__tests_html_ab26660d031934c0026a90623019d6110"><div class="ttname"><a href="namespacescran__tests.html#ab26660d031934c0026a90623019d6110">scran_tests::vector_n</a></div><div class="ttdeci">std::vector&lt; Type_ &gt; vector_n(const Type_ *ptr, size_t n)</div><div class="ttdef"><b>Definition</b> vector_n.hpp:22</div></div>
 </div><!-- fragment --><p>Expect specific error messages:</p>
-<div class="fragment"><div class="line">expect_error([&amp;]() { <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;foobar&quot;</span>); }, <span class="stringliteral">&quot;foo&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code hl_function" href="namespacescran__tests.html#aedfa1cdeade06a492180756ec00c2211">scran_tests::expect_error</a>([&amp;]() { <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;foobar&quot;</span>); }, <span class="stringliteral">&quot;foo&quot;</span>);</div>
+<div class="ttc" id="anamespacescran__tests_html_aedfa1cdeade06a492180756ec00c2211"><div class="ttname"><a href="namespacescran__tests.html#aedfa1cdeade06a492180756ec00c2211">scran_tests::expect_error</a></div><div class="ttdeci">void expect_error(Function_ fun, std::string match)</div><div class="ttdef"><b>Definition</b> expect_error.hpp:24</div></div>
+</div><!-- fragment --><p>Test against zero-initialized assumptions:</p>
+<div class="fragment"><div class="line">std::vector&lt;double&gt; tmp(10, <a class="code hl_function" href="namespacescran__tests.html#a756254bebe220cd98a9f899d3ed45b31">scran_tests::initial_value</a>());</div>
+<div class="line">std::vector&lt;double&gt; tmp2(10, <a class="code hl_function" href="namespacescran__tests.html#a756254bebe220cd98a9f899d3ed45b31">scran_tests::initial_value</a>());</div>
+<div class="ttc" id="anamespacescran__tests_html_a756254bebe220cd98a9f899d3ed45b31"><div class="ttname"><a href="namespacescran__tests.html#a756254bebe220cd98a9f899d3ed45b31">scran_tests::initial_value</a></div><div class="ttdeci">int initial_value()</div><div class="ttdef"><b>Definition</b> initial_value.hpp:24</div></div>
 </div><!-- fragment --><p>Check out the <a href="https://libscran.github.io/scran_tests">documentation</a> for more details. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->

@@ -97,6 +97,8 @@ Functions</h2></td></tr>
 <tr class="memitem:aedfa1cdeade06a492180756ec00c2211" id="r_aedfa1cdeade06a492180756ec00c2211"><td class="memTemplParams" colspan="2">template&lt;typename Function_ &gt; </td></tr>
 <tr class="memitem:aedfa1cdeade06a492180756ec00c2211"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacescran__tests.html#aedfa1cdeade06a492180756ec00c2211">expect_error</a> (Function_ fun, std::string match)</td></tr>
 <tr class="separator:aedfa1cdeade06a492180756ec00c2211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a756254bebe220cd98a9f899d3ed45b31" id="r_a756254bebe220cd98a9f899d3ed45b31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacescran__tests.html#a756254bebe220cd98a9f899d3ed45b31">initial_value</a> ()</td></tr>
+<tr class="separator:a756254bebe220cd98a9f899d3ed45b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4dec0fde071a43a6fd49fced09cd8f3" id="r_aa4dec0fde071a43a6fd49fced09cd8f3"><td class="memTemplParams" colspan="2">template&lt;typename Type_  = double&gt; </td></tr>
 <tr class="memitem:aa4dec0fde071a43a6fd49fced09cd8f3"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Type_ &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacescran__tests.html#aa4dec0fde071a43a6fd49fced09cd8f3">simulate_vector</a> (size_t length, const <a class="el" href="structscran__tests_1_1SimulationParameters.html">SimulationParameters</a>&lt; Type_ &gt; &amp;params)</td></tr>
 <tr class="separator:aa4dec0fde071a43a6fd49fced09cd8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,6 +260,33 @@ template&lt;typename Function_ &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a756254bebe220cd98a9f899d3ed45b31" name="a756254bebe220cd98a9f899d3ed45b31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a756254bebe220cd98a9f899d3ed45b31">&#9670;&#160;</a></span>initial_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int scran_tests::initial_value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Some functions store their output in a user-supplied pointer to a pre-allocated array. Such functions should not assume that the array has been zeroed. Incorrectly making this assumption can lead to subtle bugs when the functions are called with non-zeroed buffers. To test that this assumption is not present in function <code>X()</code>, we can initialize an <code>output</code> buffer with a non-zero initial value from the <code><a class="el" href="namespacescran__tests.html#a756254bebe220cd98a9f899d3ed45b31">initial_value()</a></code> function below. After calling <code>X()</code> with <code>output</code>, we can compare the contents of <code>output</code> against the expected output to verify that the function ignores the non-zero initial value. If the expected output is not readily available, we could instead initialize a separate vector with another call to <code><a class="el" href="namespacescran__tests.html#a756254bebe220cd98a9f899d3ed45b31">initial_value()</a></code> and call <code>X()</code> on it. Any inconsistency in the results would indicate that the variable <code><a class="el" href="namespacescran__tests.html#a756254bebe220cd98a9f899d3ed45b31">initial_value()</a></code> is affecting the results.</p>
+<dl class="section return"><dt>Returns</dt><dd>An integer in [1, 255] that is incremented on every call (or rolls back to 1). </dd></dl>
 
 </div>
 </div>

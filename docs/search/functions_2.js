@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['simulate_5fvector_0',['simulate_vector',['../namespacescran__tests.html#aa4dec0fde071a43a6fd49fced09cd8f3',1,'scran_tests']]]
+  ['initial_5fvalue_0',['initial_value',['../namespacescran__tests.html#a756254bebe220cd98a9f899d3ed45b31',1,'scran_tests']]]
 ];
