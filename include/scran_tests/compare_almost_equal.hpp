@@ -2,6 +2,7 @@
 #define SCRAN_TESTS_COMPARE_ALMOST_EQUAL_HPP
 
 #include <gtest/gtest.h>
+#include <cmath>
 
 /**
  * @file compare_almost_equal.hpp
@@ -74,8 +75,9 @@ inline bool compare_almost_equal(double left, double right, double tol = 1e-8, b
  */
 template<class Vector_>
 void compare_almost_equal(const Vector_& left, const Vector_& right, double tol = 1e-8) {
-    ASSERT_EQ(left.size(), right.size());
-    for (size_t i = 0; i < left.size(); ++i) {
+    auto n = left.size();
+    ASSERT_EQ(n, right.size());
+    for (decltype(n) i = 0; i < n; ++i) {
         if (!compare_almost_equal(left[i], right[i], tol, false)) {
             EXPECT_TRUE(false) << "mismatch in almost-equal floats at element " << i << " (expected " << left[i] << ", got " << right[i] << ")";
             return;

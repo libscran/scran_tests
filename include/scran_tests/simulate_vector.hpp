@@ -5,6 +5,7 @@
 #include <vector>
 #include <cstdint>
 #include <type_traits>
+#include <cstddef>
 
 /**
  * @file simulate_vector.hpp
@@ -51,7 +52,7 @@ struct SimulationParameters {
     /**
      * Seed for the random number generator.
      */
-    uint64_t seed = 1234567890;
+    std::uint64_t seed = 1234567890;
 };
 
 /**
@@ -66,7 +67,7 @@ struct SimulationParameters {
  * @return Vector of values.
  */
 template<typename Type_ = double>
-std::vector<Type_> simulate_vector(size_t length, const SimulationParameters<Type_>& params) {
+std::vector<Type_> simulate_vector(std::size_t length, const SimulationParameters<Type_>& params) {
     std::mt19937_64 rng(params.seed);
 
     typename std::conditional<

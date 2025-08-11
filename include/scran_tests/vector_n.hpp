@@ -2,6 +2,7 @@
 #define SCRAN_TESTS_VECTOR_N_HPP
 
 #include <vector>
+#include <cstddef>
 
 /**
  * @file vector_n.hpp
@@ -19,7 +20,7 @@ namespace scran_tests {
  * @return Vector of the array's values.
  */
 template<typename Type_>
-std::vector<Type_> vector_n(const Type_* ptr, size_t n) {
+std::vector<Type_> vector_n(const Type_* ptr, std::size_t n) {
     return std::vector<Type_>(ptr, ptr + n);
 }
 
