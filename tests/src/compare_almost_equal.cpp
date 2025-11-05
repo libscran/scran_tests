@@ -1,11 +1,13 @@
 #include "scran_tests/compare_almost_equal.hpp"
 
 TEST(CompareAlmostEqual, Scalar) {
-    EXPECT_TRUE (scran_tests::compare_almost_equal(1, 1.000000005));
-    EXPECT_FALSE(scran_tests::compare_almost_equal(1, 1.00000005, /* tol */ 1e-8, /* report = */ false));
+    EXPECT_TRUE (scran_tests::compare_almost_equal(1.0, 1.0));
+    EXPECT_TRUE (scran_tests::compare_almost_equal(1.0, 1.000000005));
+    EXPECT_FALSE(scran_tests::compare_almost_equal(1.0, 1.00000005, /* tol */ 1e-8, /* report = */ false));
 
-    EXPECT_TRUE (scran_tests::compare_almost_equal(10, 10.00000005));
-    EXPECT_FALSE(scran_tests::compare_almost_equal(10, 10.0000005, /* tol */ 1e-8, /* report = */ false));
+    EXPECT_TRUE (scran_tests::compare_almost_equal(10.0, 10.0));
+    EXPECT_TRUE (scran_tests::compare_almost_equal(10.0, 10.00000005));
+    EXPECT_FALSE(scran_tests::compare_almost_equal(10.0, 10.0000005, /* tol */ 1e-8, /* report = */ false));
 
     EXPECT_TRUE (scran_tests::compare_almost_equal(1e-15, 1e-16));
     EXPECT_FALSE(scran_tests::compare_almost_equal(1e-15, 1e-8, /* tol */ 1e-8, /* report = */ false));
