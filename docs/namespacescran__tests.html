@@ -99,6 +99,9 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html">CompareAlmostEqualParameters</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters for <code><a class="el" href="#aed669d22dbf0c4f44e28e60694c647db">compare_almost_equal()</a></code>.  <a href="structscran__tests_1_1CompareAlmostEqualParameters.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscran__tests_1_1SimulateCompressedSparseMatrixParameters.html">SimulateCompressedSparseMatrixParameters</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters for <code><a class="el" href="#a39aaaf9ba538c9507e5518fa98921321">simulate_compressed_sparse_matrix()</a></code>.  <a href="structscran__tests_1_1SimulateCompressedSparseMatrixParameters.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,11 +119,11 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1f2dabdd22e6109e92a903dde35bc76a" id="r_a1f2dabdd22e6109e92a903dde35bc76a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f2dabdd22e6109e92a903dde35bc76a">compare_almost_equal</a> (double left, double right, double tol=1e-8, bool report=true)</td></tr>
-<tr class="separator:a1f2dabdd22e6109e92a903dde35bc76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec0422cb265c91a87380f15526bb0e3e" id="r_aec0422cb265c91a87380f15526bb0e3e"><td class="memTemplParams" colspan="2">template&lt;class Vector_ &gt; </td></tr>
-<tr class="memitem:aec0422cb265c91a87380f15526bb0e3e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aec0422cb265c91a87380f15526bb0e3e">compare_almost_equal</a> (const Vector_ &amp;left, const Vector_ &amp;right, double tol=1e-8)</td></tr>
-<tr class="separator:aec0422cb265c91a87380f15526bb0e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed669d22dbf0c4f44e28e60694c647db" id="r_aed669d22dbf0c4f44e28e60694c647db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed669d22dbf0c4f44e28e60694c647db">compare_almost_equal</a> (double left, double right, const <a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html">CompareAlmostEqualParameters</a> &amp;params)</td></tr>
+<tr class="separator:aed669d22dbf0c4f44e28e60694c647db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa646d2112105ae373f8c1b05a70267b5" id="r_aa646d2112105ae373f8c1b05a70267b5"><td class="memTemplParams" colspan="2">template&lt;class LeftContainer_ , class RightContainer_ &gt; </td></tr>
+<tr class="memitem:aa646d2112105ae373f8c1b05a70267b5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa646d2112105ae373f8c1b05a70267b5">compare_almost_equal_containers</a> (const LeftContainer_ &amp;left, const RightContainer_ &amp;right, <a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html">CompareAlmostEqualParameters</a> params)</td></tr>
+<tr class="separator:aa646d2112105ae373f8c1b05a70267b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedfa1cdeade06a492180756ec00c2211" id="r_aedfa1cdeade06a492180756ec00c2211"><td class="memTemplParams" colspan="2">template&lt;typename Function_ &gt; </td></tr>
 <tr class="memitem:aedfa1cdeade06a492180756ec00c2211"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aedfa1cdeade06a492180756ec00c2211">expect_error</a> (Function_ fun, std::string match)</td></tr>
 <tr class="separator:aedfa1cdeade06a492180756ec00c2211"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,51 +161,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aec0422cb265c91a87380f15526bb0e3e" name="aec0422cb265c91a87380f15526bb0e3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec0422cb265c91a87380f15526bb0e3e">&#9670;&#160;</a></span>compare_almost_equal() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Vector_ &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void scran_tests::compare_almost_equal </td>
-          <td>(</td>
-          <td class="paramtype">const Vector_ &amp;</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Vector_ &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1e-8</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Check if two vectors contain an equal number of almost-equal floats. This compares the corresponding elements from each vector using <code><a class="el" href="#a1f2dabdd22e6109e92a903dde35bc76a">compare_almost_equal()</a></code>. Any test failure is reported via GoogleTest.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Vector_</td><td>Some vector-like container of floating-point values.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">left</td><td>One of the vectors. </td></tr>
-    <tr><td class="paramname">right</td><td>The other vector. </td></tr>
-    <tr><td class="paramname">tol</td><td>The tolerance for the comparison, passed to the other <code><a class="el" href="#a1f2dabdd22e6109e92a903dde35bc76a">compare_almost_equal()</a></code> function. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a1f2dabdd22e6109e92a903dde35bc76a" name="a1f2dabdd22e6109e92a903dde35bc76a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f2dabdd22e6109e92a903dde35bc76a">&#9670;&#160;</a></span>compare_almost_equal() <span class="overload">[2/2]</span></h2>
+<a id="aed669d22dbf0c4f44e28e60694c647db" name="aed669d22dbf0c4f44e28e60694c647db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed669d22dbf0c4f44e28e60694c647db">&#9670;&#160;</a></span>compare_almost_equal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,12 +183,7 @@ template&lt;class Vector_ &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1e-8</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>report</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html">CompareAlmostEqualParameters</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>params</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -237,17 +192,60 @@ template&lt;class Vector_ &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Check if two floating-point numbers are equal, accounting for some relative difference. Two numbers are considered equal if their difference is less than the product of <code>tolerance</code> and their mean. If both numbers are close to zero, they are considered equal if the difference is below 1e-15; this avoids being overly stringent for numbers that should be zero, at the cost of potentially missing large relative differences.</p>
+<p>Check if two floating-point numbers are equal, accounting for some relative difference. Two numbers are considered equal if their difference is less than the product of <code><a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html#a7433d5b096e748fb4087976464740fe7">CompareAlmostEqualParameters::relative_tolerance</a></code> and their mean. If both numbers are close to zero, they are considered equal if the difference is below <code><a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html#a1b5cff844b50a9bf8f74464e6e427f49">CompareAlmostEqualParameters::absolute_tolerance</a></code>; this avoids being overly stringent for numbers that should be zero, at the cost of potentially missing large relative differences.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">left</td><td>One of the numbers. </td></tr>
     <tr><td class="paramname">right</td><td>The other number. </td></tr>
-    <tr><td class="paramname">tol</td><td>The tolerance for the comparison. </td></tr>
-    <tr><td class="paramname">report</td><td>Whether to report the error via GoogleTest.</td></tr>
+    <tr><td class="paramname">params</td><td>Further parameters.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether the two numbers are equal. </dd></dl>
+
+</div>
+</div>
+<a id="aa646d2112105ae373f8c1b05a70267b5" name="aa646d2112105ae373f8c1b05a70267b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa646d2112105ae373f8c1b05a70267b5">&#9670;&#160;</a></span>compare_almost_equal_containers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LeftContainer_ , class RightContainer_ &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void scran_tests::compare_almost_equal_containers </td>
+          <td>(</td>
+          <td class="paramtype">const LeftContainer_ &amp;</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const RightContainer_ &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html">CompareAlmostEqualParameters</a></td>          <td class="paramname"><span class="paramname"><em>params</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if two vectors contain an equal number of almost-equal floats. This compares the corresponding elements from each vector using <code><a class="el" href="#aed669d22dbf0c4f44e28e60694c647db">compare_almost_equal()</a></code>. Any test failure is reported via GoogleTest.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">LeftVector_</td><td>Some vector-like container of floating-point values. </td></tr>
+    <tr><td class="paramname">RightVector_</td><td>Another vector-like container of floating-point values.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>One of the vectors. </td></tr>
+    <tr><td class="paramname">right</td><td>The other vector. </td></tr>
+    <tr><td class="paramname">params</td><td>Further parameters. Note that <code><a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html#a055ef50d8051add3cc65c7489be2261b">CompareAlmostEqualParameters::report</a></code> is ignored, any mismatching value will always be reported. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

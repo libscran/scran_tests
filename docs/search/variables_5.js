@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['upper_0',['upper',['../structscran__tests_1_1SimulateCompressedSparseMatrixParameters.html#a9f1e4e67f9faa6537f65851424c5c811',1,'scran_tests::SimulateCompressedSparseMatrixParameters::upper'],['../structscran__tests_1_1SimulateVectorParameters.html#a8863c3128dd054a515076fef6df4c07d',1,'scran_tests::SimulateVectorParameters::upper']]]
+  ['relative_5ftolerance_0',['relative_tolerance',['../structscran__tests_1_1CompareAlmostEqualParameters.html#a7433d5b096e748fb4087976464740fe7',1,'scran_tests::CompareAlmostEqualParameters']]],
+  ['report_1',['report',['../structscran__tests_1_1CompareAlmostEqualParameters.html#a055ef50d8051add3cc65c7489be2261b',1,'scran_tests::CompareAlmostEqualParameters']]]
 ];

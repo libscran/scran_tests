@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pointers_0',['pointers',['../structscran__tests_1_1SimulatedCompressedSparseMatrix.html#a6db1f2d75e9747aab663144755ff5c83',1,'scran_tests::SimulatedCompressedSparseMatrix']]],
-  ['primary_1',['primary',['../structscran__tests_1_1SimulatedCompressedSparseMatrix.html#a8767ffaa28388c1d060790a14d2c0c44',1,'scran_tests::SimulatedCompressedSparseMatrix']]]
+  ['lower_0',['lower',['../structscran__tests_1_1SimulateCompressedSparseMatrixParameters.html#a630b9e512f9fc4d15016879f83809976',1,'scran_tests::SimulateCompressedSparseMatrixParameters::lower'],['../structscran__tests_1_1SimulateVectorParameters.html#af5082e00dd2e9ea3a3d385916da2bdab',1,'scran_tests::SimulateVectorParameters::lower']]]
 ];

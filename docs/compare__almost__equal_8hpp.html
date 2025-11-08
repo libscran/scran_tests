@@ -91,6 +91,7 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">compare_almost_equal.hpp File Reference</div></div>
@@ -104,6 +105,12 @@ $(function(){ initResizable(false); });
 </div>
 <p><a href="compare__almost__equal_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html">scran_tests::CompareAlmostEqualParameters</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters for <code><a class="el" href="namespacescran__tests.html#aed669d22dbf0c4f44e28e60694c647db">compare_almost_equal()</a></code>.  <a href="structscran__tests_1_1CompareAlmostEqualParameters.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacescran__tests.html">scran_tests</a></td></tr>
@@ -112,11 +119,11 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1f2dabdd22e6109e92a903dde35bc76a" id="r_a1f2dabdd22e6109e92a903dde35bc76a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacescran__tests.html#a1f2dabdd22e6109e92a903dde35bc76a">scran_tests::compare_almost_equal</a> (double left, double right, double tol=1e-8, bool report=true)</td></tr>
-<tr class="separator:a1f2dabdd22e6109e92a903dde35bc76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec0422cb265c91a87380f15526bb0e3e" id="r_aec0422cb265c91a87380f15526bb0e3e"><td class="memTemplParams" colspan="2">template&lt;class Vector_ &gt; </td></tr>
-<tr class="memitem:aec0422cb265c91a87380f15526bb0e3e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacescran__tests.html#aec0422cb265c91a87380f15526bb0e3e">scran_tests::compare_almost_equal</a> (const Vector_ &amp;left, const Vector_ &amp;right, double tol=1e-8)</td></tr>
-<tr class="separator:aec0422cb265c91a87380f15526bb0e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed669d22dbf0c4f44e28e60694c647db" id="r_aed669d22dbf0c4f44e28e60694c647db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacescran__tests.html#aed669d22dbf0c4f44e28e60694c647db">scran_tests::compare_almost_equal</a> (double left, double right, const <a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html">CompareAlmostEqualParameters</a> &amp;params)</td></tr>
+<tr class="separator:aed669d22dbf0c4f44e28e60694c647db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa646d2112105ae373f8c1b05a70267b5" id="r_aa646d2112105ae373f8c1b05a70267b5"><td class="memTemplParams" colspan="2">template&lt;class LeftContainer_ , class RightContainer_ &gt; </td></tr>
+<tr class="memitem:aa646d2112105ae373f8c1b05a70267b5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacescran__tests.html#aa646d2112105ae373f8c1b05a70267b5">scran_tests::compare_almost_equal_containers</a> (const LeftContainer_ &amp;left, const RightContainer_ &amp;right, <a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html">CompareAlmostEqualParameters</a> params)</td></tr>
+<tr class="separator:aa646d2112105ae373f8c1b05a70267b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Check for almost-equality of floating-point values. </p>

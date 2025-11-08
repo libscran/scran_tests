@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['libscran_0',['Test utilities for libscran',['../index.html',1,'']]],
-  ['lower_1',['lower',['../structscran__tests_1_1SimulateCompressedSparseMatrixParameters.html#a630b9e512f9fc4d15016879f83809976',1,'scran_tests::SimulateCompressedSparseMatrixParameters::lower'],['../structscran__tests_1_1SimulateVectorParameters.html#af5082e00dd2e9ea3a3d385916da2bdab',1,'scran_tests::SimulateVectorParameters::lower']]]
+  ['index_0',['index',['../structscran__tests_1_1SimulatedCompressedSparseMatrix.html#a14aed3f6628c5d741e80dc5b9b6a272d',1,'scran_tests::SimulatedCompressedSparseMatrix']]],
+  ['initial_5fvalue_1',['initial_value',['../namespacescran__tests.html#a756254bebe220cd98a9f899d3ed45b31',1,'scran_tests']]],
+  ['initial_5fvalue_2ehpp_2',['initial_value.hpp',['../initial__value_8hpp.html',1,'']]]
 ];
