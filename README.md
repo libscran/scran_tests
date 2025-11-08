@@ -31,18 +31,27 @@ Then, to use the library, we just have to add the header:
 We can now simulate some random data easily: 
 
 ```cpp
-auto res = scran_tests::simulate_vector(100, scran_tests::SimulationParameters());
+auto res = scran_tests::simulate_vector(
+    100,
+    scran_tests::SimulateVectorParameters()
+);
 
 auto sparse_res = scran_tests::simulate_vector(100, []{
-    scran_tests::SimulationParameters params
+    scran_tests::SimulateVectorParameters params
     params.density = 0.1;
     return params;
 }());
 
 auto int_res = scran_tests::simulate_vector(100, []{
-    scran_tests::SimulationParameters<uint16_t> params
+    scran_tests::SimulateVectorParameters<uint16_t> params
     params.density = 0.1;
     return params;
+}());
+
+auto compressed_sparse = scran_tests::simulate_compressed_sparse_matrix(
+    100,
+    200,
+    scran_tests::SimulateCompressedSparseMatrixParameters<double>{} 
 }());
 ```
 

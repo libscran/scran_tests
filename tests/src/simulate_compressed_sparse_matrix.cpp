@@ -43,7 +43,6 @@ TEST(SimulateCompressedSparseMatrix, Basic) {
 
     // Bounds make sense.
     {
-        scran_tests::SimulateCompressedSparseMatrixParameters params;
         auto res = scran_tests::simulate_compressed_sparse_matrix(90, 20, []{
             scran_tests::SimulateCompressedSparseMatrixParameters params;
             params.lower = 1;
