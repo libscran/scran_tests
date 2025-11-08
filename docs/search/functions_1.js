@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['expect_5ferror_0',['expect_error',['../namespacescran__tests.html#aedfa1cdeade06a492180756ec00c2211',1,'scran_tests']]]
+  ['default_5fsimulation_5fmin_0',['default_simulation_min',['../namespacescran__tests.html#a7bdec6c64dc080878b80348590314ba0',1,'scran_tests']]]
 ];

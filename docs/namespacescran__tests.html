@@ -88,6 +88,7 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">scran_tests Namespace Reference</div></div>
 </div><!--header-->
@@ -98,9 +99,20 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscran__tests_1_1SimulationParameters.html">SimulationParameters</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters for <code><a class="el" href="#af1cca5411c5aafc4ee18825a90c253ee">simulate_vector()</a></code>.  <a href="structscran__tests_1_1SimulationParameters.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscran__tests_1_1SimulateCompressedSparseMatrixParameters.html">SimulateCompressedSparseMatrixParameters</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters for <code><a class="el" href="#a39aaaf9ba538c9507e5518fa98921321">simulate_compressed_sparse_matrix()</a></code>.  <a href="structscran__tests_1_1SimulateCompressedSparseMatrixParameters.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscran__tests_1_1SimulatedCompressedSparseMatrix.html">SimulatedCompressedSparseMatrix</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Results of <code><a class="el" href="#a39aaaf9ba538c9507e5518fa98921321">simulate_compressed_sparse_matrix()</a></code>.  <a href="structscran__tests_1_1SimulatedCompressedSparseMatrix.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscran__tests_1_1SimulateVectorParameters.html">SimulateVectorParameters</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters for <code><a class="el" href="#a355d542121f5ffa4c0e48a03a16b3821">simulate_vector()</a></code>.  <a href="structscran__tests_1_1SimulateVectorParameters.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac816b6be02a80010907237636d730cac" id="r_ac816b6be02a80010907237636d730cac"><td class="memItemLeft" align="right" valign="top">typedef std::mt19937_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac816b6be02a80010907237636d730cac">RngEngine</a></td></tr>
+<tr class="separator:ac816b6be02a80010907237636d730cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -114,16 +126,38 @@ Functions</h2></td></tr>
 <tr class="separator:aedfa1cdeade06a492180756ec00c2211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a756254bebe220cd98a9f899d3ed45b31" id="r_a756254bebe220cd98a9f899d3ed45b31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a756254bebe220cd98a9f899d3ed45b31">initial_value</a> ()</td></tr>
 <tr class="separator:a756254bebe220cd98a9f899d3ed45b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1cca5411c5aafc4ee18825a90c253ee" id="r_af1cca5411c5aafc4ee18825a90c253ee"><td class="memTemplParams" colspan="2">template&lt;typename Type_  = double&gt; </td></tr>
-<tr class="memitem:af1cca5411c5aafc4ee18825a90c253ee"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Type_ &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af1cca5411c5aafc4ee18825a90c253ee">simulate_vector</a> (std::size_t length, const <a class="el" href="structscran__tests_1_1SimulationParameters.html">SimulationParameters</a>&lt; Type_ &gt; &amp;params)</td></tr>
-<tr class="separator:af1cca5411c5aafc4ee18825a90c253ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39aaaf9ba538c9507e5518fa98921321" id="r_a39aaaf9ba538c9507e5518fa98921321"><td class="memTemplParams" colspan="2">template&lt;typename Data_  = double, typename Index_  = int, typename Pointer_  = std::size_t&gt; </td></tr>
+<tr class="memitem:a39aaaf9ba538c9507e5518fa98921321"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structscran__tests_1_1SimulatedCompressedSparseMatrix.html">SimulatedCompressedSparseMatrix</a>&lt; Data_, Index_, Pointer_ &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a39aaaf9ba538c9507e5518fa98921321">simulate_compressed_sparse_matrix</a> (Index_ primary, Index_ secondary, const <a class="el" href="structscran__tests_1_1SimulateCompressedSparseMatrixParameters.html">SimulateCompressedSparseMatrixParameters</a>&lt; Data_ &gt; &amp;params)</td></tr>
+<tr class="separator:a39aaaf9ba538c9507e5518fa98921321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bdec6c64dc080878b80348590314ba0" id="r_a7bdec6c64dc080878b80348590314ba0"><td class="memTemplParams" colspan="2">template&lt;typename Type_ &gt; </td></tr>
+<tr class="memitem:a7bdec6c64dc080878b80348590314ba0"><td class="memTemplItemLeft" align="right" valign="top">constexpr Type_&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7bdec6c64dc080878b80348590314ba0">default_simulation_min</a> ()</td></tr>
+<tr class="separator:a7bdec6c64dc080878b80348590314ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355d542121f5ffa4c0e48a03a16b3821" id="r_a355d542121f5ffa4c0e48a03a16b3821"><td class="memTemplParams" colspan="2">template&lt;typename Type_  = double&gt; </td></tr>
+<tr class="memitem:a355d542121f5ffa4c0e48a03a16b3821"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Type_ &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a355d542121f5ffa4c0e48a03a16b3821">simulate_vector</a> (const typename std::vector&lt; Type_ &gt;::size_type length, const <a class="el" href="structscran__tests_1_1SimulateVectorParameters.html">SimulateVectorParameters</a>&lt; Type_ &gt; &amp;params)</td></tr>
+<tr class="separator:a355d542121f5ffa4c0e48a03a16b3821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b3ce7ce0f00fc5f8a84f902193fdd36" id="r_a6b3ce7ce0f00fc5f8a84f902193fdd36"><td class="memTemplParams" colspan="2">template&lt;typename Type_ &gt; </td></tr>
 <tr class="memitem:a6b3ce7ce0f00fc5f8a84f902193fdd36"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Type_ &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6b3ce7ce0f00fc5f8a84f902193fdd36">vector_n</a> (const Type_ *ptr, std::size_t n)</td></tr>
 <tr class="separator:a6b3ce7ce0f00fc5f8a84f902193fdd36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Test utilites for <b>libscran</b>. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="ac816b6be02a80010907237636d730cac" name="ac816b6be02a80010907237636d730cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac816b6be02a80010907237636d730cac">&#9670;&#160;</a></span>RngEngine</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::mt19937_64 <a class="el" href="#ac816b6be02a80010907237636d730cac">scran_tests::RngEngine</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Type of the random number generator for simulating data. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="aec0422cb265c91a87380f15526bb0e3e" name="aec0422cb265c91a87380f15526bb0e3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec0422cb265c91a87380f15526bb0e3e">&#9670;&#160;</a></span>compare_almost_equal() <span class="overload">[1/2]</span></h2>
 
@@ -217,6 +251,40 @@ template&lt;class Vector_ &gt; </div>
 
 </div>
 </div>
+<a id="a7bdec6c64dc080878b80348590314ba0" name="a7bdec6c64dc080878b80348590314ba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bdec6c64dc080878b80348590314ba0">&#9670;&#160;</a></span>default_simulation_min()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type_ &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type_ scran_tests::default_simulation_min </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Type_</td><td>Numeric type of the simulated value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>-10 if <code>Type</code> is signed, otherwise 0. </dd></dl>
+
+</div>
+</div>
 <a id="aedfa1cdeade06a492180756ec00c2211" name="aedfa1cdeade06a492180756ec00c2211"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aedfa1cdeade06a492180756ec00c2211">&#9670;&#160;</a></span>expect_error()</h2>
 
@@ -281,8 +349,53 @@ template&lt;typename Function_ &gt; </div>
 
 </div>
 </div>
-<a id="af1cca5411c5aafc4ee18825a90c253ee" name="af1cca5411c5aafc4ee18825a90c253ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1cca5411c5aafc4ee18825a90c253ee">&#9670;&#160;</a></span>simulate_vector()</h2>
+<a id="a39aaaf9ba538c9507e5518fa98921321" name="a39aaaf9ba538c9507e5518fa98921321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39aaaf9ba538c9507e5518fa98921321">&#9670;&#160;</a></span>simulate_compressed_sparse_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Data_  = double, typename Index_  = int, typename Pointer_  = std::size_t&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structscran__tests_1_1SimulatedCompressedSparseMatrix.html">SimulatedCompressedSparseMatrix</a>&lt; Data_, Index_, Pointer_ &gt; scran_tests::simulate_compressed_sparse_matrix </td>
+          <td>(</td>
+          <td class="paramtype">Index_</td>          <td class="paramname"><span class="paramname"><em>primary</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Index_</td>          <td class="paramname"><span class="paramname"><em>secondary</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structscran__tests_1_1SimulateCompressedSparseMatrixParameters.html">SimulateCompressedSparseMatrixParameters</a>&lt; Data_ &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>params</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Data_</td><td>Numeric type of the data. </td></tr>
+    <tr><td class="paramname">Index_</td><td>Integer type of the indices. </td></tr>
+    <tr><td class="paramname">Pointer_</td><td>Integer type of the compressed sparse pointers.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">primary</td><td>Extent of the primary dimension, i.e., along which the structural non-zero elements are compressed. For example, in a compressed sparse row matrix, the rows would be the primary dimension. </td></tr>
+    <tr><td class="paramname">secondary</td><td>Extent of the secondary dimension, i.e., not the primary dimension. </td></tr>
+    <tr><td class="paramname">params</td><td>Simulation parameters.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Contents of a simulated compressed sparse matrix. </dd></dl>
+
+</div>
+</div>
+<a id="a355d542121f5ffa4c0e48a03a16b3821" name="a355d542121f5ffa4c0e48a03a16b3821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a355d542121f5ffa4c0e48a03a16b3821">&#9670;&#160;</a></span>simulate_vector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,16 +405,16 @@ template&lt;typename Type_  = double&gt; </div>
         <tr>
           <td class="memname">std::vector&lt; Type_ &gt; scran_tests::simulate_vector </td>
           <td>(</td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+          <td class="paramtype">const typename std::vector&lt; Type_ &gt;::size_type</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structscran__tests_1_1SimulationParameters.html">SimulationParameters</a>&lt; Type_ &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>params</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="structscran__tests_1_1SimulateVectorParameters.html">SimulateVectorParameters</a>&lt; Type_ &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>params</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Simulate a vector of random values. If <code><a class="el" href="structscran__tests_1_1SimulationParameters.html#a9306326c276bd345916377147987ac19">SimulationParameters::density</a> &lt; 1</code>, this will be a sparse vector with structural zeros.</p>
+<p>Simulate a vector of random values. If <code>SimulationParameters::density &lt; 1</code>, this will be a sparse vector with structural zeros.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Type_</td><td>Numeric type of the simulated value.</td></tr>
@@ -315,7 +428,7 @@ template&lt;typename Type_  = double&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Vector of values. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of simulated values. </dd></dl>
 
 </div>
 </div>

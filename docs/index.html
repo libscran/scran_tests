@@ -107,22 +107,20 @@ $(function(){ initResizable(false); });
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="scran__tests_8hpp.html">scran_tests/scran_tests.hpp</a>&quot;</span></div>
 <div class="ttc" id="ascran__tests_8hpp_html"><div class="ttname"><a href="scran__tests_8hpp.html">scran_tests.hpp</a></div><div class="ttdoc">Test utilites for libscran.</div></div>
 </div><!-- fragment --><p>We can now simulate some random data easily:</p>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> res = <a class="code hl_function" href="namespacescran__tests.html#af1cca5411c5aafc4ee18825a90c253ee">scran_tests::simulate_vector</a>(100, <a class="code hl_struct" href="structscran__tests_1_1SimulationParameters.html">scran_tests::SimulationParameters</a>());</div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> res = <a class="code hl_function" href="namespacescran__tests.html#a355d542121f5ffa4c0e48a03a16b3821">scran_tests::simulate_vector</a>(100, scran_tests::SimulationParameters());</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">auto</span> sparse_res = <a class="code hl_function" href="namespacescran__tests.html#af1cca5411c5aafc4ee18825a90c253ee">scran_tests::simulate_vector</a>(100, []{</div>
-<div class="line">    <a class="code hl_struct" href="structscran__tests_1_1SimulationParameters.html">scran_tests::SimulationParameters</a> params</div>
-<div class="line">    params.<a class="code hl_variable" href="structscran__tests_1_1SimulationParameters.html#a9306326c276bd345916377147987ac19">density</a> = 0.1;</div>
+<div class="line"><span class="keyword">auto</span> sparse_res = <a class="code hl_function" href="namespacescran__tests.html#a355d542121f5ffa4c0e48a03a16b3821">scran_tests::simulate_vector</a>(100, []{</div>
+<div class="line">    scran_tests::SimulationParameters params</div>
+<div class="line">    params.density = 0.1;</div>
 <div class="line">    <span class="keywordflow">return</span> params;</div>
 <div class="line">}());</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">auto</span> int_res = <a class="code hl_function" href="namespacescran__tests.html#af1cca5411c5aafc4ee18825a90c253ee">scran_tests::simulate_vector</a>(100, []{</div>
-<div class="line">    <a class="code hl_struct" href="structscran__tests_1_1SimulationParameters.html">scran_tests::SimulationParameters&lt;uint16_t&gt;</a> params</div>
-<div class="line">    params.<a class="code hl_variable" href="structscran__tests_1_1SimulationParameters.html#a9306326c276bd345916377147987ac19">density</a> = 0.1;</div>
+<div class="line"><span class="keyword">auto</span> int_res = <a class="code hl_function" href="namespacescran__tests.html#a355d542121f5ffa4c0e48a03a16b3821">scran_tests::simulate_vector</a>(100, []{</div>
+<div class="line">    scran_tests::SimulationParameters&lt;uint16_t&gt; params</div>
+<div class="line">    params.density = 0.1;</div>
 <div class="line">    <span class="keywordflow">return</span> params;</div>
 <div class="line">}());</div>
-<div class="ttc" id="anamespacescran__tests_html_af1cca5411c5aafc4ee18825a90c253ee"><div class="ttname"><a href="namespacescran__tests.html#af1cca5411c5aafc4ee18825a90c253ee">scran_tests::simulate_vector</a></div><div class="ttdeci">std::vector&lt; Type_ &gt; simulate_vector(std::size_t length, const SimulationParameters&lt; Type_ &gt; &amp;params)</div><div class="ttdef"><b>Definition</b> simulate_vector.hpp:70</div></div>
-<div class="ttc" id="astructscran__tests_1_1SimulationParameters_html"><div class="ttname"><a href="structscran__tests_1_1SimulationParameters.html">scran_tests::SimulationParameters</a></div><div class="ttdoc">Parameters for simulate_vector().</div><div class="ttdef"><b>Definition</b> simulate_vector.hpp:23</div></div>
-<div class="ttc" id="astructscran__tests_1_1SimulationParameters_html_a9306326c276bd345916377147987ac19"><div class="ttname"><a href="structscran__tests_1_1SimulationParameters.html#a9306326c276bd345916377147987ac19">scran_tests::SimulationParameters::density</a></div><div class="ttdeci">double density</div><div class="ttdef"><b>Definition</b> simulate_vector.hpp:39</div></div>
+<div class="ttc" id="anamespacescran__tests_html_a355d542121f5ffa4c0e48a03a16b3821"><div class="ttname"><a href="namespacescran__tests.html#a355d542121f5ffa4c0e48a03a16b3821">scran_tests::simulate_vector</a></div><div class="ttdeci">std::vector&lt; Type_ &gt; simulate_vector(const typename std::vector&lt; Type_ &gt;::size_type length, const SimulateVectorParameters&lt; Type_ &gt; &amp;params)</div><div class="ttdef"><b>Definition</b> simulate_vector.hpp:96</div></div>
 </div><!-- fragment --><p>Comparison of almost-equal floating-point numbers, given a relative tolerance:</p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="namespacescran__tests.html#a1f2dabdd22e6109e92a903dde35bc76a">scran_tests::compare_almost_equal</a>(1.0, 1.0000000001);</div>
 <div class="line"> </div>

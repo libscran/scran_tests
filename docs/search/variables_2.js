@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['seed_0',['seed',['../structscran__tests_1_1SimulationParameters.html#a2fa0a8a5150326f256ce1599ae0fbb92',1,'scran_tests::SimulationParameters']]]
+  ['lower_0',['lower',['../structscran__tests_1_1SimulateCompressedSparseMatrixParameters.html#a630b9e512f9fc4d15016879f83809976',1,'scran_tests::SimulateCompressedSparseMatrixParameters::lower'],['../structscran__tests_1_1SimulateVectorParameters.html#af5082e00dd2e9ea3a3d385916da2bdab',1,'scran_tests::SimulateVectorParameters::lower']]]
 ];
