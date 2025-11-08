@@ -4,6 +4,7 @@
 #include "compare_almost_equal.hpp"
 #include "vector_n.hpp"
 #include "simulate_vector.hpp"
+#include "simulate_compressed_sparse_matrix.hpp"
 #include "expect_error.hpp"
 #include "initial_value.hpp"
 

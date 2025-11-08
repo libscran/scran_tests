@@ -3,6 +3,7 @@ add_executable(
     src/compare_almost_equal.cpp
     src/vector_n.cpp
     src/simulate_vector.cpp
+    src/simulate_compressed_sparse_matrix.cpp
     src/expect_error.cpp
     src/initial_value.cpp
 )
