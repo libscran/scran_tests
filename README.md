@@ -58,11 +58,11 @@ auto compressed_sparse = scran_tests::simulate_compressed_sparse_matrix(
 Comparison of almost-equal floating-point numbers, given a relative tolerance:
 
 ```cpp
-scran_tests::compare_almost_equal(1.0, 1.0000000001);
+scran_tests::compare_almost_equal(1.0, 1.0000000001, {});
 
 std::vector<double> v1{1.0, 2.000000001};
 std::vector<double> v2{1.000000001, 2.0};
-scran_tests::compare_almost_equal(v1, v2);
+scran_tests::compare_almost_equal_containers(v1, v2, {});
 ```
 
 Quick construction of vectors for use in `EXPECT_EQ()`:
