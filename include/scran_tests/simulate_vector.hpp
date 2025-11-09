@@ -75,7 +75,7 @@ auto create_simulating_distribution(const Type_ lower, const Type_ upper) {
 }
 
 // Back-compatibility.
-template<typename Type_>
+template<typename Type_ = double>
 using SimulationParameters = SimulateVectorParameters<Type_>;
 /**
  * @endcond
