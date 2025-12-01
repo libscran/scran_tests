@@ -26,6 +26,11 @@ struct CompareAlmostEqualParameters {
     double absolute_tolerance = 1e-15;
 
     /**
+     * Whether NaNs should be considered equal to each other.
+     */
+    bool nan_equal = true;
+
+    /**
      * Whether to report a mismatch as a test failure in GoogleTest.
      */
     bool report = true;
@@ -33,9 +38,13 @@ struct CompareAlmostEqualParameters {
 
 /**
  * Check if two floating-point numbers are equal, accounting for some relative difference.
+ *
  * Two numbers are considered equal if their difference is less than the product of `CompareAlmostEqualParameters::relative_tolerance` and their mean.
  * If both numbers are close to zero, they are considered equal if the difference is below `CompareAlmostEqualParameters::absolute_tolerance`;
  * this avoids being overly stringent for numbers that should be zero, at the cost of potentially missing large relative differences.
+ *
+ * If both numbers are NaN, they are reported to be equal unless `CompareAlmostEqualParameters::nan_equal = false`.
+ * Obviously, NaNs are considered to be non-equal to any non-NaN number.
  *
  * @param left One of the numbers.
  * @param right The other number.
@@ -44,6 +53,21 @@ struct CompareAlmostEqualParameters {
  * @return Whether the two numbers are equal.
  */
 inline bool compare_almost_equal(double left, double right, const CompareAlmostEqualParameters& params) {
+    const auto message = [&]() -> void {
+        if (params.report) {
+            EXPECT_TRUE(false) << "mismatching floats (" << left << " versus " << right << ")";
+        }
+    };
+
+    if (std::isnan(left) || std::isnan(right)) {
+        if (std::isnan(left) != std::isnan(right) || !params.nan_equal) {
+            message();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     if (left == right) {
         return true;
     }
@@ -66,9 +90,7 @@ inline bool compare_almost_equal(double left, double right, const CompareAlmostE
         threshold = params.absolute_tolerance;
     }
     if (std::abs(left - right) > threshold) {
-        if (params.report) {
-            EXPECT_TRUE(false) << "mismatch in almost-equal floats (expected " << left << ", got " << right << ")";
-        }
+        message();
         return false;
     }
 
