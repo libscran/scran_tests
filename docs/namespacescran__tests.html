@@ -192,7 +192,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Check if two floating-point numbers are equal, accounting for some relative difference. Two numbers are considered equal if their difference is less than the product of <code><a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html#a7433d5b096e748fb4087976464740fe7">CompareAlmostEqualParameters::relative_tolerance</a></code> and their mean. If both numbers are close to zero, they are considered equal if the difference is below <code><a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html#a1b5cff844b50a9bf8f74464e6e427f49">CompareAlmostEqualParameters::absolute_tolerance</a></code>; this avoids being overly stringent for numbers that should be zero, at the cost of potentially missing large relative differences.</p>
+<p>Check if two floating-point numbers are equal, accounting for some relative difference.</p>
+<p>Two numbers are considered equal if their difference is less than the product of <code><a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html#a7433d5b096e748fb4087976464740fe7">CompareAlmostEqualParameters::relative_tolerance</a></code> and their mean. If both numbers are close to zero, they are considered equal if the difference is below <code><a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html#a1b5cff844b50a9bf8f74464e6e427f49">CompareAlmostEqualParameters::absolute_tolerance</a></code>; this avoids being overly stringent for numbers that should be zero, at the cost of potentially missing large relative differences.</p>
+<p>If both numbers are NaN, they are reported to be equal unless <code><a class="el" href="structscran__tests_1_1CompareAlmostEqualParameters.html#a4b70d499f1ded7eca5751a0b72f8f36b">CompareAlmostEqualParameters::nan_equal</a> = false</code>. Obviously, NaNs are considered to be non-equal to any non-NaN number.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">left</td><td>One of the numbers. </td></tr>
